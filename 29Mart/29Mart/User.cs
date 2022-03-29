@@ -11,10 +11,7 @@ namespace _29Mart
             UserNameTool = UserName;
             
         }
-        int count = 0;
-        int countTwo = 0;
-        int countThree = 0;
-        int result = 0;
+        
         private string _userName;
         private string _passWord;
 
@@ -43,22 +40,9 @@ namespace _29Mart
                 if (value.Length > 8 && value.Length < 25)
                 {
                     
-                    if (HasDigit(value) == true && count < 1)
+                   if (HasDigit(value) && HasLower(value) &&HasUpper(value))
                     {
-                        count++;
-                    }
-                    if (HasUpper(value) == true && countTwo < 1)
-                    {
-                        countTwo++;
-                    }
-                    if (HasLower(value) == true && countThree < 1)
-                    {
-                        countThree++;
-                    }
-                    result = count + countTwo + countThree;
-                    if (result > 2)
-                    {
-                        this._passWord = value; 
+                        this._passWord = value;
                     }
                     
 
